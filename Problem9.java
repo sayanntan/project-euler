@@ -9,13 +9,18 @@
 public class Problem9 {
 
 	public static void main(String[] args) {
-		int n=1000;
+		int n=1000; 
+		boolean f=false;
 		for(int a=1;a<=n/3;a++) {
 			for(int b=a+1;b<=n/2;b++) {
 				int c=n-a-b;
-				if(a*a+b*b == c*c)
+				if(a*a+b*b == c*c) {
 					System.out.println(a*b*c);
+					f=true;
+					break;
+				}
 			}
+			if(f==true) break;
 		}
 	}
 
